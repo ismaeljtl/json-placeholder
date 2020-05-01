@@ -1,0 +1,45 @@
+.option-button,
+.Dropdown {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.btn-light,
+.btn-light:hover,
+.btn-light:active,
+.btn-light:focus,
+.btn-light:not(:disabled):not(.disabled).active:focus,
+.btn-light:not(:disabled):not(.disabled):active:focus,
+.show > .btn-light.dropdown-toggle:focus {
+  background-color: white;
+  border-color: white;
+  box-shadow: none;
+}
+
+.option-button .btn-light {
+  padding: 0.5rem 0.5rem 0 0;
+}
+
+.flex-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.flex-container .btn-light {
+  padding: 0;
+}
+
+.eliminar,
+.eliminar:hover,
+.eliminar:active,
+.eliminar:focus,
+.eliminar:not(:disabled):not(.disabled).active:focus,
+.eliminar:not(:disabled):not(.disabled):active:focus,
+.show > .eliminar.dropdown-toggle:focus {
+  color: red;
+}

@@ -1,0 +1,31 @@
+@media (min-width: 576px) and (max-width: 768px) {
+  .Post .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+.Post .card {
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.Post .card-title {
+  margin: 0;
+}
+
+.Post .card-text {
+  margin-top: 0.75rem;
+}
+
+.Post .bottom-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Post .bottom-container small:first-child {
+  font-weight: bolder;
+}

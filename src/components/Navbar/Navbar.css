@@ -1,0 +1,12 @@
+.navbar {
+  background-color: #ffffff;
+}
+.navbar-collapse a {
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  color: #191919;
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
