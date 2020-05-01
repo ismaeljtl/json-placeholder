@@ -5,12 +5,14 @@ import {
   getPostsByUserId,
   handleOpenPostModal,
   handleClosePostModal,
+  deletePost,
 } from "../redux/actions/postActions";
 import { getCommentsByUser } from "../redux/actions/commentActions";
 import Post from "../components/Post/Post";
 import Loader from "../components/Loader/Loader";
 import Error from "../components/Error/Error";
 import PostModal from "../components/PostModal/PostModal";
+import Spinner from "../components/Spinner/Spinner";
 
 class PostsByUserContainer extends React.Component {
   componentDidMount() {
@@ -54,11 +56,12 @@ class PostsByUserContainer extends React.Component {
     }
     return (
       <div className="PostsByUserContainer container-fluid">
+        {this.props.postReducer.spinner && <Spinner />}
         <h1 className="mt-4">Publicaciones de usuario</h1>
-
         <Post
           users={[this.props.userReducer.user]}
           posts={this.props.postReducer.posts}
+          deletePost={this.props.deletePost}
           handleOpenModal={this.props.handleOpenPostModal}
           comments={this.props.commentReducer.comments}
         />
@@ -86,6 +89,7 @@ const mapDispatchToProps = {
   handleOpenPostModal,
   handleClosePostModal,
   getCommentsByUser,
+  deletePost,
 };
 
 export default connect(
