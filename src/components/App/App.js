@@ -9,7 +9,7 @@ import PostFormContainer from "../../containers/PostFormContainer";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/json-placeholder">
       <Layout>
         <Switch>
           <Route exact path="/" component={UserContainer} />
