@@ -1,8 +1,16 @@
 import React from "react";
 import "./Post.css";
 import Dropdown from "../Dropdown/Dropdown";
+import { withRouter } from "react-router-dom";
 
-function Post({ posts, deletePost, users, comments, handleOpenModal }) {
+function Post({
+  posts,
+  deletePost,
+  users,
+  comments,
+  handleOpenModal,
+  history,
+}) {
   return (
     <div className="card-columns Post">
       {posts.map((post) => (
@@ -37,6 +45,17 @@ function Post({ posts, deletePost, users, comments, handleOpenModal }) {
           </div>
         </div>
       ))}
+      <div
+        className="card card-agregar"
+        onClick={() => history.push(`/postForm/0`)}
+      >
+        <div className="plus">
+          <strong>
+            <h3>+</h3>
+          </strong>
+        </div>
+        <h3>Agregar Usuario</h3>
+      </div>
     </div>
   );
 
@@ -50,4 +69,4 @@ function Post({ posts, deletePost, users, comments, handleOpenModal }) {
   }
 }
 
-export default Post;
+export default withRouter(Post);

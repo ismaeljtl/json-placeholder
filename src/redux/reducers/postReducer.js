@@ -37,6 +37,20 @@ export default function postReducer(state = initialState, action) {
         spinner: false,
       };
 
+    case "CREATE_POST":
+      return {
+        ...state,
+        cargando: false,
+        spinner: false,
+      };
+
+    case "UPDATE_POST":
+      return {
+        ...state,
+        cargando: false,
+        spinner: false,
+      };
+
     case "POST_ERROR":
       return {
         ...state,

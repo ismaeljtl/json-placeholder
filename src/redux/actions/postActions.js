@@ -84,6 +84,66 @@ export function deletePost(id) {
   };
 }
 
+export function createPost(post) {
+  return async (dispatch, getState) => {
+    const BaseURL = "https://jsonplaceholder.typicode.com";
+
+    dispatch({
+      type: "POST_SPINNER",
+    });
+
+    await fetch(`${BaseURL}/posts`, {
+      method: "POST",
+      body: JSON.stringify(post),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((resp) => handleErrors(resp))
+      .then((json) => alert("El post ha sido creado con éxito"))
+      .catch((err) => {
+        dispatch({
+          type: "POST_ERROR",
+          payload: "Ha ocurrido un error, intente más tarde.",
+        });
+      });
+
+    dispatch({
+      type: "CREATE_POST",
+    });
+  };
+}
+
+export function updatePost(post) {
+  return async (dispatch, getState) => {
+    const BaseURL = "https://jsonplaceholder.typicode.com";
+
+    dispatch({
+      type: "POST_SPINNER",
+    });
+
+    await fetch(`${BaseURL}/posts/${post.id}`, {
+      method: "PUT",
+      body: JSON.stringify(post),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((resp) => handleErrors(resp))
+      .then((json) => alert("El post ha sido actualizado con éxito"))
+      .catch((err) => {
+        dispatch({
+          type: "USER_ERROR",
+          payload: `Ha ocurrido un error, intente más tarde. ${err}`,
+        });
+      });
+
+    dispatch({
+      type: "UPDATE_POST",
+    });
+  };
+}
+
 export function handleOpenPostModal(post) {
   return {
     type: "HANDLE_OPEN_POST_MODAL",

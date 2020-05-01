@@ -64,7 +64,6 @@ function User({ users, handleOpenModal, deleteUser, history }) {
           </div>
         </div>
       ))}
-      {/* TODO funcionalidad para agregar un usuario */}
       <div
         className="card card-agregar"
         onClick={() => history.push(`/userForm/0`)}

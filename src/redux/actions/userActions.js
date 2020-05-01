@@ -99,7 +99,7 @@ export function createUser(user) {
       type: "USER_SPINNER",
     });
 
-    await fetch(`${BaseURL}/posts`, {
+    await fetch(`${BaseURL}/users`, {
       method: "POST",
       body: JSON.stringify(user),
       headers: {
@@ -129,7 +129,7 @@ export function updateUser(user) {
       type: "USER_SPINNER",
     });
 
-    await fetch(`${BaseURL}/posts/${user.id}`, {
+    await fetch(`${BaseURL}/users/${user.id}`, {
       method: "PUT",
       body: JSON.stringify(user),
       headers: {
