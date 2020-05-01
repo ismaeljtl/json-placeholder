@@ -1,5 +1,8 @@
+# JSON-PLACEHOLDER + React + Redux
+Proyecto personal desarrollado para aprender/practicar React y Redux.
+
 ### DEMO:
-https://ismaeljtl.github.io/json-placeholder/
+Puedes probar el proyecto accediendo al siguiente enlace: https://ismaeljtl.github.io/json-placeholder/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
