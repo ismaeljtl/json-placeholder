@@ -69,7 +69,11 @@ function UserForm(props) {
               />
             </div>
             <div className="col text-center">
-              <button type="submit" className="btn btn-primary mb-4">
+              <button
+                type="submit"
+                className="btn btn-primary mb-4"
+                aria-label="Enviar"
+              >
                 Enviar
               </button>
             </div>

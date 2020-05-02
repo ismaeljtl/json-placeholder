@@ -48,6 +48,7 @@ function User({ users, handleOpenModal, deleteUser, history }) {
                     to={`/post/${user.id}`}
                     type="button"
                     className="btn btn-outline-success mt-2 mr-2"
+                    aria-label="Ver Posts"
                   >
                     Ver posts
                   </Link>
@@ -55,6 +56,7 @@ function User({ users, handleOpenModal, deleteUser, history }) {
                     type="button"
                     onClick={() => handleOpenModal(user)}
                     className="btn btn-outline-info mt-2"
+                    aria-label="Ver Detalles"
                   >
                     Ver Detalles
                   </button>
